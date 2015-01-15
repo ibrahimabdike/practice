@@ -2,10 +2,10 @@
 
 dice = [1, 2, 3, 4, 5, 6]
 
-def pairofdice(pair, n)
+def pairofdice(die, n)
   result = []
   n.times do
-    result << pair[rand.(pair.length)]
+    result << die[rand.(die.length)]
   end
   result
 end
