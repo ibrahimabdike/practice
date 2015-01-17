@@ -1,4 +1,4 @@
-# write a function that takes one argument and returns multipes of n below 100.
+# write a function that takes one argument and returns multiples of n below 100.
 
 def multiples(n)
   multi_100 = 1..100
@@ -9,4 +9,4 @@ def multiples(n)
   end
 end
 
-multiples(2)
+multiples(5)
