@@ -9,18 +9,7 @@ def minmax list, &block
   list.minmax(&block)
 end
 
-
 def minmax list, &block
-  min = list.first
-  max = list.first
-  for i in list do
-
-    if block.call(i, min) < 1 then
-      min = i
-    end
-    if block.call(i, max) > -1 then
-      max = i
-    end
-  end
-  return [min, max]
+  sorted = list.sort(&block)
+  [sorted.first, sorted.last]
 end
