@@ -5,6 +5,22 @@
 
 list = [1, 0, 4, 3, 9]
 
-def minmax(list, &block)
-  list.minmax{|a,b| a - 0 <=> b - 0}
+def minmax list, &block
+  list.minmax(&block)
+end
+
+
+def minmax list, &block
+  min = list.first
+  max = list.first
+  for i in list do
+
+    if block.call(i, min) < 1 then
+      min = i
+    end
+    if block.call(i, max) > -1 then
+      max = i
+    end
+  end
+  return [min, max]
 end
